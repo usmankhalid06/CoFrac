@@ -1,0 +1,1 @@
+You need to download FastICA MATLAB package first, then add it to the directory to run ICA and group ICA code
