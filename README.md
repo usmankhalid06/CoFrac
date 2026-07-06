@@ -63,6 +63,8 @@ Method implementations:
 | `sgBACES.m` | Sparse group BACES (cross-layer, common + layer-specific) |
 | `gICA.m` | Group ICA (cross-layer independence) |
 
+> **ICA dependency.** There is no `ICA.m` in this repo. The ICA driver (`script4_ICA_SingleLayer_9.m`) and `gICA.m` rely on the external **FastICA** package for MATLAB (`fastica` / `fpica`). Download it from [https://research.ics.aalto.fi/ica/fastica/](https://research.ics.aalto.fi/ica/fastica/) and add it to your MATLAB path before running Step 2. We use the symmetric approach with the `tanh` contrast function.
+
 Driver scripts (operating layer 9, K = 200):
 
 | File | Runs |
@@ -95,7 +97,7 @@ pip install torch transformers numpy requests hdf5storage pandas py3Dmol seleniu
 ```
 `script_convert_html_png_12.py` also needs Chrome + a matching ChromeDriver on the PATH.
 
-**MATLAB** (analysis) — R2021b or newer recommended (for `matfile` partial loading of the v7.3 `.mat`).
+**MATLAB** (analysis) — R2021b or newer recommended (for `matfile` partial loading of the v7.3 `.mat`). The ICA and group-ICA drivers additionally require the external **FastICA** package ([download](https://research.ics.aalto.fi/ica/fastica/)) on the MATLAB path.
 
 ---
 
